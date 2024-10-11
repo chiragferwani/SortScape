@@ -1,6 +1,6 @@
 # SortScape
 
-Welcome to SortScape - a visual sorting algorithm project. This project showcases various sorting algorithms such as Bubble Sort, Selection Sort, Insertion Sort, and more, using interactive visualizations.
+Welcome to SortScape - a visual sorting algorithm project. This project showcases various sorting algorithms such as Bubble Sort, Selection Sort, Quick Sort, and more, using interactive visualizations.
 
 ## Features
 
