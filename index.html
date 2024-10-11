@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Scape</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="index.js" type="module" defer></script>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Sort Scape Logo">
+            <span style="font-size: 24px;">Sort Scape</span>
+        </div>
+        <nav style="font-family: 'Glacial Indifference';">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#sort">SORT</a></li>
+                <li><a href="#algorithm">ALGORITHM</a></li>
+                <li style="margin-right: 50px;"><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="content">
+                <div class="text">
+                    <h1>Watch Data Dance To <br>The Beat Of Algorithms</h1>
+                </div>
+                <img src="images/aboutimg.png" alt="Data Visualization" class="visualizer-image">
+            </div>
+        </section>
+        
+        <!-- Sort Section -->
+        <section id="sort" style="margin-top: 50px;">
+            <h2 style="font-size: 32px; font-family: 'Kollektif';">Transforming Data, One Element at a Time</h2>
+           
+                <div class="controls">
+                    <select id="selectAlgorithm">
+                        <option value="0">Bubble Sort</option>
+                        <option value="1">Selection Sort</option>
+                        <option value="2">Quick Sort</option>
+                        <!-- Add more algorithms if needed -->
+                      </select>
+                    <label for="num-inputs">NUMBER OF INPUTS</label>
+                    <input type="number" name="sizeArray" id="numbersBars" max="20" min="1" value="10" class="styled-input">
+                    <button id="generateBtn">NEW ARRAY</button>
+                    <button id="solveBtn">SOLVE NOW</button>
+                </div>
+                <div style="margin-left: auto; margin-right: auto;" class="stage" id="stage"></div>
+                <!-- <div class="chart">
+                    <div class="bar" style="height: 50%;"></div>
+                    <div class="bar" style="height: 90%;"></div>
+                    <div class="bar" style="height: 30%;"></div>
+                    <div class="bar" style="height: 70%;"></div>
+                    <div class="bar" style="height: 20%;"></div>
+                    <div class="bar" style="height: 80%;"></div>
+                    <div class="bar" style="height: 60%;"></div>
+                </div> -->
+            
+        </section>
+        
+        <!-- Algorithm Section -->
+        <section style="margin-top: 100px;">
+            <div class="algo-container" id="algorithm">
+                <div class="algo-list">
+                    <ul>
+                        <li onclick="showAlgorithmInfo('bubble')">Bubble Sort</li>
+                        <li onclick="showAlgorithmInfo('selection')">Selection Sort</li>
+                        <li onclick="showAlgorithmInfo('insertion')">Insertion Sort</li>
+                        <!-- Add more algorithms here -->
+                    </ul>
+                </div>
+                <div class="algo-info" id="algo-info">
+                    <h3>Bubble Sort</h3>
+                            <p>Bubble Sort is an iterative sorting algorithm that imitates the movement of bubbles in sparkling water. The bubbles represent the elements of the data structure. The bigger bubbles reach the top faster than smaller bubbles, and this algorithm works in the same way.</p>
+                            <ul>
+                                <li><strong>Average Complexity:</strong> O(n<sup>2</sup>)</li>
+                                <li><strong>Best Case:</strong> O(n)</li>
+                                <li><strong>Worst Case:</strong> O(n<sup>2</sup>)</li>
+                                <li><strong>Space Complexity:</strong> O(1)</li>
+                            </ul>
+                    <!-- Algorithm details will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- Contact Section -->
+        <section id="contact" style="margin-top: 100px;">
+            <div class="contact-form-container">
+                <h2 style="text-align: center; font-weight: bold; font-family: 'Playwrite US Modern';">Contact Developer</h2>
+                <form action="https://api.web3forms.com/submit" method="post">
+                    <input type="hidden" name="access_key" value="6c08f52e-2721-4159-827b-022e5ded94c9">
+                    <label for="name" style="font-family: 'Kollektif';">Name:</label>
+                    <input type="text" style="font-family: 'Glacial Indifference';" id="name" name="name" required>
+                    <label for="email" style="font-family: 'Kollektif';">Email:</label>
+                    <input type="email" style="font-family: 'Glacial Indifference';" id="email" name="email" required>
+                    <label for="message" style="font-family: 'Kollektif';">Message:</label>
+                    <textarea id="message" style="font-family: 'Glacial Indifference';" name="message" required></textarea>
+                    <button type="submit">Send Message</button>
+                      <!-- HTML !-->
+                    
+                </form>
+            </div>
+        
+    </main>
+
+    <script>
+        function showAlgorithmInfo(algo) {
+            let info = "";
+            switch(algo) {
+                case 'bubble':
+                    info = `<h3>Bubble Sort</h3>
+                            <p>Bubble Sort is an iterative sorting algorithm that imitates the movement of bubbles in sparkling water. The bubbles represent the elements of the data structure. The bigger bubbles reach the top faster than smaller bubbles, and this algorithm works in the same way.</p>
+                            <ul>
+                                <li><strong>Average Complexity:</strong> O(n<sup>2</sup>)</li>
+                                <li><strong>Best Case:</strong> O(n)</li>
+                                <li><strong>Worst Case:</strong> O(n<sup>2</sup>)</li>
+                                <li><strong>Space Complexity:</strong> O(1)</li>
+                            </ul>`;
+                    break;
+                case 'selection':
+                    info = `<h3>Selection Sort</h3>
+                            <p>Selection Sort repeatedly selects the minimum element from the unsorted part of the array and swaps it with the first unsorted element. It's simple to implement and does not require extra space, but it's not efficient for large datasets as its time complexity is O(n<sup>2</sup>).</p>
+                            <ul>
+                                <li><strong>Average Complexity:</strong> O(n<sup>2</sup>)</li>
+                                <li><strong>Best Case:</strong> O(n<sup>2</sup>)</li>
+                                <li><strong>Worst Case:</strong> O(n<sup>2</sup>)</li>
+                                <li><strong>Space Complexity:</strong> O(1)</li>
+                            </ul>`;
+                    break;
+                case 'insertion':
+                    info = `<h3>Insertion Sort</h3>
+                            <p>Insertion Sort builds the final sorted array one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, it has a simple implementation and works well for small or mostly sorted arrays.</p>
+                            <ul>
+                                <li><strong>Average Complexity:</strong> O(n<sup>2</sup>)</li>
+                                <li><strong>Best Case:</strong> O(n)</li>
+                                <li><strong>Worst Case:</strong> O(n<sup>2</sup>)</li>
+                                <li><strong>Space Complexity:</strong> O(1)</li>
+                            </ul>`;
+                    break;
+                // Add more cases for other algorithms
+                default:
+                    info = `<h3>Select an Algorithm</h3>
+                            <p>Choose an algorithm from the list to see more details.</p>`;
+            }
+            document.getElementById('algo-info').innerHTML = info;
+        }
+    </script>
+</body>
+</html>
